@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JavaScript01</title>
+</head>
+<body>
+    <h1>Exercício 1</h1>
+    <hr>
+    <h2 class="txt">Converter de Celsius para Farenheit.</h2>
+    <div class="formulario">
+        <form id="formTemp">
+            <input type="text" name="CInput" id="CInput" required>
+            <button type="submit" id="btn1">CONVERTER</button>
+        </form>
+
+        <script>
+            var CInput = document.getElementById("CInput");
+            console.log(CInput);
+
+            var btn1 = document.getElementById("btn1");
+            console.log(btn1);
+
+            btn1.addEventListener("click", function(event){
+                event.preventDefault();
+                console.log(CInput.value+" °C em Farenheit: "+(9*parseFloat(CInput.value)/5 + 32)+" °F.");
+                alert(CInput.value+" °C em Farenheit: "+(9*parseFloat(CInput.value)/5 + 32)+" °F.");
+            })
+        </script>
+    </div>
+    <h2 class="txt">Converter de Farenheit para Celsius.</h2>
+    <div class="formulario">
+        <form id="formTemp">
+            <input type="text" name="FInput" id="FInput" required>
+            <button type="submit" id="btn2">CONVERTER</button>
+        </form>
+
+        <script>
+            var FInput = document.getElementById("FInput");
+            console.log(FInput);
+
+            var btn2 = document.getElementById("btn2");
+            console.log(btn2);
+
+            btn2.addEventListener("click", function(event){
+                event.preventDefault();
+                console.log(FInput.value+" °F em Celsius: "+((5/9)*(parseFloat(FInput.value) - 32))+" °C.");
+                alert(FInput.value+" °F em Celsius: "+((5/9)*(parseFloat(FInput.value) - 32))+" °C.");
+            })
+        </script>
+    </div>
+</body>
+</html>
